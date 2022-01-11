@@ -3,34 +3,13 @@
 <html ng-app="tutorialApp">
 <head>
     <title>Grocery</title>
-    <meta charset="utf-8"/>
+    <meta charset="utf-8" />
     <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-route.min.js"></script>
     <script src="js/app.js"></script>
     <script src="js/controllers/tutorialCtrl.js"></script>
 </head>
-<body ng-controller="TutorialCtrl">
-    <hr />
-    <h1>{{tutorialObject.title}}</h1>
-    <h2>{{tutorialObject.subtitle}}</h2>
-    <p>number:{{2+2}}</p>
-    <p>string: {{"Elizabeth"+" "+"Rangel"}}</p>
-    <p>string: {{tutorialObject.name+" "+tutorialObject.lastname}}</p>
-    <p>Binding: {{tutorialObject.bindOutput}}</p>
-    <br />
-    <button ng-click="timeTwo()">Multiply</button>
-    <br />
-    <label>Nombre: </label>
-    <input ng-model="tutorialObject.name" />
-    <br />
-    <label>Apellido: </label>
-    <input ng-model="tutorialObject.lastname" />
-
-    <!--Usando directive como elemento-->
-    <er-welcome-message></er-welcome-message>
-
-    <!--Usando directive como atributo-->
-    <span er-welcome-message></span>
-
-
+<body>
+    <div ng-view></div>
 </body>
 </html>

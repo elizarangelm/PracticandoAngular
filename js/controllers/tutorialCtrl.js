@@ -10,14 +10,17 @@ angular.module('tutorialCtrlModule', [])
         $scope.tutorialObject.title = "MainPage";
         $scope.tutorialObject.subtitle = "subtitle";
 
-        $scope.tutorialObject.bindOutput = 2
+        $scope.tutorialObject.bindOutput = 2;
 
         $scope.timeTwo = function () {
             //$scope.tutorialObject.bindOutput *= 2;
             $scope.tutorialObject.bindOutput = Calculations.timeTwo($scope.tutorialObject.bindOutput);
-
         }
-        Calculations.pitagorasTeorema()
+        Calculations.pitagorasTeorema();
+    }])
+    //controlador segundo
+    .controller("TutorialCtrl2", ["$scope", function ($scope) {
+        $scope.secondTutorial = "this is the second";
     }])
 
     .directive("erWelcomeMessage", function () {
@@ -27,7 +30,6 @@ angular.module('tutorialCtrlModule', [])
             restrict: "AE",
             template: "<div>How u doin'?</div>"
         }
-
     })
 
     //crear servicio
@@ -44,5 +46,4 @@ angular.module('tutorialCtrlModule', [])
 
         return calculations;
     })
-    ;
-
+    
