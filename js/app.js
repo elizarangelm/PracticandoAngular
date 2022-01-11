@@ -4,7 +4,6 @@ var app = angular.module('tutorialApp', ["ngRoute", "tutorialCtrlModule"]);
 //configurar routing
 app.config(function ($routeProvider) {
     $routeProvider
-
         .when("/", {
             templateUrl: "views/tutorial.html",
             controller: "TutorialCtrl"
@@ -13,6 +12,7 @@ app.config(function ($routeProvider) {
             templateUrl: "views/tutorialSecond.html",
             controller: "TutorialCtrl2"
         })
-
-
+        .otherwise({
+            redirectTo: "/"
+        });
 })
