@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--atributos que nos dan angular source code ng-app, ng-controller, ng-click, ng- model-->
 <html ng-app="tutorialApp">
 <head>
     <title>Grocery</title>
@@ -15,12 +16,20 @@
     <p>string: {{"Elizabeth"+" "+"Rangel"}}</p>
     <p>string: {{tutorialObject.name+" "+tutorialObject.lastname}}</p>
     <p>Binding: {{tutorialObject.bindOutput}}</p>
+    <br />
+    <button ng-click="timeTwo()">Multiply</button>
     <label>Nombre: </label>
     <input ng-model="tutorialObject.name" />
     <br />
     <label>Apellido: </label>
     <input ng-model="tutorialObject.lastname" />
-    <br />
-    <button ng-click="timeTwo()">Multiply</button>
+
+    <!--Usando directive como elemento-->
+    <er-welcome-message></er-welcome-message>
+
+    <!--Usando directive como atributo-->
+    <span er-welcome-message></span>
+
+
 </body>
 </html>
